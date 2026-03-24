@@ -34,20 +34,6 @@ The server reads configuration from a local `.env` file in the project root.
 2. Add your provider credentials
 3. Run `npm start`
 
-OpenRouter:
-
-```env
-OPENROUTER_API_KEY=your-openrouter-key
-OPENROUTER_MODEL=openai/gpt-4o-mini
-```
-
-OpenAI:
-
-```env
-OPENAI_API_KEY=your-openai-key
-OPENAI_MODEL=gpt-4o-mini
-```
-
 Credentials can be supplied separately on request if needed.
 
 ## Notes
