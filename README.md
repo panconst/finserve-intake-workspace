@@ -1,79 +1,59 @@
 # FinServe Intake Workspace
 
-Working prototype for the Step 2 intake-validation slice.
+Working prototype for intake normalization and validation in the lead-to-application workflow.
 
 ## Overview
 
-This prototype focuses on one narrow part of the lead-to-application workflow:
+The workspace accepts raw intake text, extracts a structured application record, supports analyst review, and produces three downstream views from the approved record:
 
-- accept fresh intake text
-- extract a structured application record
-- surface review reasons and source evidence
-- let an operations user confirm or correct fields
-- create one approved record
-- reuse that approved record in downstream outputs
-
-Downstream outputs in this prototype are:
-
-- CRM-style record view
+- CRM-style record
 - draft memo summary
-- API payload preview for handoff into the next system step
+- API payload preview for handoff
 
-## Reviewer setup
+## Run
 
 Requirements:
 
-- Node 18+ recommended
+- Node 18+
 
-Run locally:
+Start the app:
 
 ```bash
 npm start
 ```
 
-Then open [http://127.0.0.1:3000](http://127.0.0.1:3000).
+Open [http://127.0.0.1:3000](http://127.0.0.1:3000).
 
-## Default behavior
+If no provider key is configured, the backend uses the local fallback extractor.
 
-The project works without any API key.
+## Live AI mode
 
-If no provider key is configured, the backend uses a local extraction fallback so the reviewer can still evaluate the workflow end-to-end without setting up secrets.
-
-This fallback mode is intended to make the prototype reproducible and easy to run in a clean environment. It demonstrates the intake-review-approval workflow without requiring external credentials.
-
-## Optional live AI mode
-
-The server reads a local `.env` file from the project root.
+The server reads configuration from a local `.env` file in the project root.
 
 1. Copy `.env.example` to `.env`
-2. Fill in your local provider key
+2. Add your provider credentials
 3. Run `npm start`
 
-Example `.env` for OpenRouter:
+OpenRouter:
 
 ```env
 OPENROUTER_API_KEY=your-openrouter-key
 OPENROUTER_MODEL=openai/gpt-4o-mini
 ```
 
-Example `.env` for OpenAI:
+OpenAI:
 
 ```env
 OPENAI_API_KEY=your-openai-key
 OPENAI_MODEL=gpt-4o-mini
 ```
 
-The `.env` file is local only and should not be committed.
-
-With provider credentials configured, the prototype uses live AI extraction through the backend and produces a more complete and realistic extraction flow than the local fallback mode.
-
-For a full live verification of the prototype, provider credentials can be supplied separately on request rather than embedded in the public repository.
+Credentials can be supplied separately on request if needed.
 
 ## Notes
 
-- The fallback path is included intentionally so the prototype remains reproducible for reviewers.
-- Live AI mode is available through backend environment configuration, not through a frontend API key field.
-- The main UI does not expose demo cases, but for development you can preload hidden samples:
+- `.env` is local and should not be committed.
+- Hidden sample inputs are available for development:
   - `http://127.0.0.1:3000/?sample=clean`
   - `http://127.0.0.1:3000/?sample=missing`
   - `http://127.0.0.1:3000/?sample=conflict`
