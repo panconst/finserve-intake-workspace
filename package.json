@@ -1,0 +1,9 @@
+{
+  "name": "finserve-validated-intake-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Working prototype for FinServe intake normalization and validation.",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

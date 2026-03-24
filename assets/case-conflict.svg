@@ -1,0 +1,13 @@
+<svg width="900" height="640" viewBox="0 0 900 640" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="640" fill="#f7f1e4"/>
+  <rect x="74" y="54" width="752" height="534" rx="22" fill="#fffdf8" stroke="#dbcdb4" stroke-width="4"/>
+  <text x="112" y="116" fill="#0d5c63" font-size="34" font-family="Georgia">Expansion Financing Request</text>
+  <text x="112" y="162" fill="#706252" font-size="21" font-family="Segoe UI">Applicant: Northshore Logistics sp. z o.o.</text>
+  <text x="112" y="202" fill="#706252" font-size="21" font-family="Segoe UI">Registration No.: KRS 0000664408</text>
+  <text x="112" y="242" fill="#706252" font-size="21" font-family="Segoe UI">Annual revenue FY2025: PLN 4,200,000</text>
+  <text x="112" y="282" fill="#706252" font-size="21" font-family="Segoe UI">Signed form amount: PLN 400,000</text>
+  <rect x="112" y="340" width="676" height="118" rx="18" fill="#fbe2dd"/>
+  <text x="138" y="392" fill="#9c3d2d" font-size="28" font-family="Georgia">Conflict detected</text>
+  <text x="138" y="430" fill="#8d6e53" font-size="20" font-family="Segoe UI">Email request differs from the signed form amount</text>
+  <text x="112" y="534" fill="#918171" font-size="18" font-family="Segoe UI">Conflict case: assistant escalates the disagreement instead of guessing.</text>
+</svg>

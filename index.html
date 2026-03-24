@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FinServe Intake Workspace</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="workspace-header">
+        <div>
+          <p class="eyebrow">FinServe Operations</p>
+          <h1>Intake Workspace</h1>
+        </div>
+        <div class="service-stack">
+          <span id="serviceBadge" class="badge badge-neutral">Checking</span>
+          <p id="serviceNote" class="service-note">Checking extraction service...</p>
+        </div>
+      </header>
+
+      <main class="workspace-grid">
+        <section class="panel intake-panel">
+          <div class="panel-header">
+            <h2>Intake</h2>
+            <div class="action-row">
+              <button id="clearButton" class="button button-secondary" type="button">Clear</button>
+              <button id="extractButton" class="button" type="button">Extract fields</button>
+            </div>
+          </div>
+          <label class="field-label" for="subjectInput">Email subject</label>
+          <input id="subjectInput" class="input" type="text" placeholder="Paste the incoming subject line">
+
+          <label class="field-label" for="emailInput">Email body</label>
+          <textarea id="emailInput" class="textarea" spellcheck="false" placeholder="Paste the full inbound email"></textarea>
+
+          <label class="field-label" for="documentInput">Document / OCR text</label>
+          <textarea id="documentInput" class="textarea textarea-short" spellcheck="false" placeholder="Paste text extracted from the submitted form or attachment"></textarea>
+
+          <div id="statusBar" class="status-bar">Paste intake data and run extraction.</div>
+        </section>
+
+        <section class="panel review-panel">
+          <div class="panel-header">
+            <h2>Review queue</h2>
+            <div id="reviewSummary" class="summary-badges"></div>
+          </div>
+          <div class="table-wrap">
+            <table class="review-table">
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Proposed value</th>
+                  <th>Source</th>
+                  <th>Review reason</th>
+                  <th>Status</th>
+                  <th>Evidence</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="reviewTableBody">
+                <tr>
+                  <td colspan="7" class="empty-state">No extracted fields yet.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="review-toolbar">
+            <button id="confirmCleanButton" class="button button-secondary" type="button">Confirm clean fields</button>
+            <button id="approveButton" class="button" type="button">Approve record</button>
+          </div>
+        </section>
+
+        <section class="panel approved-panel">
+          <div class="panel-header">
+            <h2>Approved record</h2>
+            <span id="approvedBadge" class="badge badge-neutral">Pending</span>
+          </div>
+          <div id="approvedRecord" class="record-grid">
+            <p class="empty-state">Approved record will appear here after review is complete.</p>
+          </div>
+        </section>
+
+        <section class="panel downstream-panel">
+          <div class="panel-header">
+            <h2>Downstream outputs</h2>
+          </div>
+          <div class="downstream-stack">
+            <section id="crmCard" class="downstream-card">
+              <p class="empty-state">CRM view is generated from the approved record.</p>
+            </section>
+            <section id="memoDraft" class="downstream-card">
+              <p class="empty-state">Draft memo summary is generated from the approved record.</p>
+            </section>
+            <section class="downstream-card">
+              <div class="system-header">
+                <h3>API payload preview</h3>
+                <span class="badge badge-accent">Ready for handoff</span>
+              </div>
+              <pre id="payloadPreview" class="payload-preview">{
+  "handoff_payload": "pending"
+}</pre>
+            </section>
+          </div>
+        </section>
+
+        <section class="panel activity-panel">
+          <div class="panel-header">
+            <h2>Activity log</h2>
+          </div>
+          <div id="activityLog" class="timeline">
+            <p class="empty-state">No activity yet.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

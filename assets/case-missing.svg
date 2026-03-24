@@ -1,0 +1,13 @@
+<svg width="900" height="640" viewBox="0 0 900 640" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="640" fill="#f7f1e4"/>
+  <rect x="74" y="54" width="752" height="534" rx="22" fill="#fffdf8" stroke="#dbcdb4" stroke-width="4"/>
+  <text x="112" y="116" fill="#0d5c63" font-size="34" font-family="Georgia">Inventory Line Intake Form</text>
+  <text x="112" y="162" fill="#706252" font-size="21" font-family="Segoe UI">Client: Green Basket Foods sp. z o.o.</text>
+  <text x="112" y="202" fill="#706252" font-size="21" font-family="Segoe UI">Registration ID: KRS 0000788823</text>
+  <text x="112" y="242" fill="#706252" font-size="21" font-family="Segoe UI">Annual turnover: approx. PLN 1.6m</text>
+  <text x="112" y="282" fill="#706252" font-size="21" font-family="Segoe UI">Requested facility: PLN 180,000</text>
+  <rect x="112" y="340" width="676" height="118" rx="18" fill="#fdebd8"/>
+  <text x="138" y="392" fill="#b96b22" font-size="28" font-family="Georgia">Review note</text>
+  <text x="138" y="430" fill="#8d6e53" font-size="20" font-family="Segoe UI">Contact phone unreadable in scanned form</text>
+  <text x="112" y="534" fill="#918171" font-size="18" font-family="Segoe UI">Missing-data case: analyst only fills what the system cannot trust.</text>
+</svg>
