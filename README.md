@@ -39,6 +39,8 @@ The project works without any API key.
 
 If no provider key is configured, the backend uses a local extraction fallback so the reviewer can still evaluate the workflow end-to-end without setting up secrets.
 
+This fallback mode is intended to make the prototype reproducible and easy to run in a clean environment. It demonstrates the intake-review-approval workflow without requiring external credentials.
+
 ## Optional live AI mode
 
 The server reads a local `.env` file from the project root.
@@ -62,6 +64,10 @@ OPENAI_MODEL=gpt-4o-mini
 ```
 
 The `.env` file is local only and should not be committed.
+
+With provider credentials configured, the prototype uses live AI extraction through the backend and produces a more complete and realistic extraction flow than the local fallback mode.
+
+For a full live verification of the prototype, provider credentials can be supplied separately on request rather than embedded in the public repository.
 
 ## Notes
 
